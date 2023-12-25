@@ -21,8 +21,7 @@
         summary,
         article {
             padding: 10px 20px;
-            color: var(--grey);
-
+            text-align: justify;
             transition: 0.5s;
         }
 
@@ -49,22 +48,24 @@
         &[open] {
             summary {
                 &::after {
-                   content: '▲';
-                   color: var(--black-010);
+                    content: '▲';
+                    color: var(--black-010);
                 }
-                background: var(--primary);
-                border-radius: 7px 7px 0 0 !important;
+
+                
+                border-radius: 7px 7px 0 0;
             }
         }
+
         &:not([open]) {
             summary {
                 &::after {
-                   content: '▼';
-                   color: var(--white);
+                    content: '▼';
+                    color: var(--white);
                 }
 
-                background: var(--primary);
-                border-radius: 7px 7px 0 0 !important;
+                
+                border-radius: 7px 7px 0 0;
             }
         }
     }

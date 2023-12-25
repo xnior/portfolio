@@ -3,9 +3,12 @@
   @for (item of arrayExperiences(); track item) {
   <details>
     <summary>
-      
-      <p><strong>{{item.summary.strong}}</strong>{{item.summary.p}}</p>
+      <p>
+        <strong>{{ item.summary.strong }}</strong
+        >{{ item.summary.p }}
+      </p>
     </summary>
     <article [innerHTML]="item.text"></article>
-  </details>}
+  </details>
+  }
 </div>
