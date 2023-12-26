@@ -11,82 +11,80 @@ import { IProject } from "../../interface/IProject.iterface";
 export class ProjectsComponent {
   public arrayProjects = signal<IProject[]>([
     {
-      src: "assets/img/projects/vfull.svg",
+      src: "assets/img/projects/img_1.jpg",
       alt: "VFull",
       title: "VFull",
-      width: "100px",
-      height: "51px",
+      width: "160px",
+      height: "160px",
       description:
-        "VFull es una plataforma de video streaming que permite a los usuarios crear y compartir contenido en vivo.",
+        "VFull é uma plataforma de streaming de vídeo que permite aos usuários criar e compartilhar conteúdo ao vivo.",
       links: {
-        name: "Ver proyecto",
-        href: "https://vfull.io/",
+        name: "Ver projeto",
+        href: "#",
       },
     },
     {
-      src: "assets/img/projects/medic.svg",
+      src: "assets/img/projects/img_2.jpg",
       alt: "Medic",
       title: "Medic",
-      width: "100px",
-      height: "51px",
+      width: "160px",
+      height: "160px",
       description:
-        "Medic es una plataforma de video streaming que permite a los usuarios crear y compartir contenido en vivo.",
+        "Angular é um sistema de design de código aberto para criar aplicativos da Web.",
       links: {
-        name: "Ver proyecto",
-        href: "https://medic.com/",
+        name: "Ver Projeto",
+        href: "#",
       },
-    },
-    {
-      src: "assets/img/projects/medic.svg",
+    },{
+      src: "assets/img/projects/img_3.jpg",
       alt: "Medic",
       title: "Medic",
-      width: "100px",
-      height: "51px",
+      width: "160px",
+      height: "160px",
       description:
-        "Medic es una plataforma de video streaming que permite a los usuarios crear y compartir contenido en vivo.",
+        "CSS é um código de linguagem de estilo usado para descrever a apresentação de um documento escrito em uma linguagem de marcação.",
       links: {
-        name: "Ver proyecto",
-        href: "https://medic.com/",
+        name: "Ver Projeto",
+        href: "#",
       },
-    },
-    {
-      src: "assets/img/projects/medic.svg",
+    },{
+      src: "assets/img/projects/img_4.jpg",
       alt: "Medic",
       title: "Medic",
-      width: "100px",
-      height: "51px",
+      width: "160px",
+      height: "160px",
       description:
-        "Medic es una plataforma de video streaming que permite a los usuarios crear y compartir contenido en vivo.",
+        "SCSS é uma linguagem de folha de estilo que é compilada em CSS. SCSS é a versão mais recente do SASS (Syntactically Awesome Style Sheets).",
       links: {
-        name: "Ver proyecto",
-        href: "https://medic.com/",
+        name: "Ver Projeto",
+        href: "#",
       },
-    },
-    {
-      src: "assets/img/projects/medic.svg",
+    },{
+      src: "assets/img/projects/img_5.jpg",
       alt: "Medic",
       title: "Medic",
-      width: "100px",
-      height: "51px",
+      width: "160px",
+      height: "160px",
       description:
-        "Medic es una plataforma de video streaming que permite a los usuarios crear y compartir contenido en vivo.",
+        "HTML5 é uma linguagem de marcação usada para estruturar e apresentar conteúdo na World Wide Web. É a quinta e última versão principal da tecnologia HTML.",
       links: {
-        name: "Ver proyecto",
-        href: "https://medic.com/",
+        name: "Ver Projeto",
+        href: "#",
       },
-    },
-    {
-      src: "assets/img/projects/medic.svg",
+    },{
+      src: "assets/img/projects/img_6.jpg",
       alt: "Medic",
       title: "Medic",
-      width: "100px",
-      height: "51px",
+      width: "160px",
+      height: "160px",
       description:
-        "Medic es una plataforma de video streaming que permite a los usuarios crear y compartir contenido en vivo.",
+        "Javascript desenvolveu-se a partir de uma ideia simples: trazer a programação para o navegador do usuário, reduzindo a dependência de aplicativos da Web do servidor.",
       links: {
-        name: "Ver proyecto",
-        href: "https://medic.com/",
+        name: "Ver Projeto",
+        href: "#",
       },
-    },
+    }
+    
+    
   ]);
 }
