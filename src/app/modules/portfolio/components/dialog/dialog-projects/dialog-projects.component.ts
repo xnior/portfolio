@@ -9,10 +9,10 @@ import { IProject } from "../../../interface/IProject.iterface";
   templateUrl: "./dialog-projects.component.html",
   styleUrl: "./dialog-projects.component.scss",
 })
-export class DialogProjectsComponent implements OnInit {
+export class DialogProjectsComponent  {
   constructor( 
+    @Inject(MAT_DIALOG_DATA) private _data: IProject,
     private _dialogRef: MatDialogRef<DialogProjectsComponent>,
-    @Inject(MAT_DIALOG_DATA) private _data: IProject
     ) {}
 
   ngOnInit(): void {
@@ -21,7 +21,10 @@ export class DialogProjectsComponent implements OnInit {
 
   public getData = signal<IProject | null>(null);
   
-  public closeModal(){
+  public closeDialog(){
+    this._dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`)
+      });
     return this._dialogRef.close();
   }
 }
