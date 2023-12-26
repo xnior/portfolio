@@ -34,7 +34,7 @@ export class ProjectsComponent {
     {
       src: "assets/img/projects/img_2.jpg",
       alt: "Angular",
-      title: "Medic",
+      title: "Angular",
       width: "160px",
       height: "160px",
       description:
@@ -49,7 +49,7 @@ export class ProjectsComponent {
     {
       src: "assets/img/projects/img_3.jpg",
       alt: "CSS",
-      title: "Medic",
+      title: "CSS",
       width: "160px",
       height: "160px",
       description:
@@ -64,7 +64,7 @@ export class ProjectsComponent {
     {
       src: "assets/img/projects/img_4.jpg",
       alt: "SCSS",
-      title: "Medic",
+      title: "SCSS",
       width: "160px",
       height: "160px",
       description:
@@ -79,7 +79,7 @@ export class ProjectsComponent {
     {
       src: "assets/img/projects/img_5.jpg",
       alt: "HTML5",
-      title: "Medic",
+      title: "HTML5",
       width: "160px",
       height: "160px",
       description:
@@ -94,7 +94,7 @@ export class ProjectsComponent {
     {
       src: "assets/img/projects/img_6.jpg",
       alt: "Javascript",
-      title: "Medic",
+      title: "Javascipt",
       width: "160px",
       height: "160px",
       description:
