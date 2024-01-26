@@ -24,12 +24,11 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.loadArray$();
   }
-  public loadArray:IProject[]=[];
+  public loadArray: IProject[] = [];
 
-public async loadArray$(): Promise<void>{
-  this.loadArray = await this.#apiService.loadArray$(arrayProjects);
-}
-
+  public async loadArray$(): Promise<void> {
+    this.loadArray = await this.#apiService.loadArray$(arrayProjects);
+  }
 
   public openDialog(data: IProject) {
     this.dialog.open(DialogProjectsComponent, {

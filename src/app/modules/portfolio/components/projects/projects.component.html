@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" #idDefer>
+
   <h2>Projetos Desenvolvidos</h2>
   <ul>
     @for (item of loadArray; track item) {
@@ -7,7 +8,7 @@
         <img [src]="item.src" [alt]="item.alt" [attr.width]="item.width" [attr.height]="item.height" loading="lazy" />
       </button>
     </li>
-  }@empty { <mat-spinner></mat-spinner> }
+  }
 </ul>
-</div>
 
+</div>

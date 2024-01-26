@@ -9,6 +9,7 @@ export interface IProject {
     {
       name: string;
       href: string;
+      history:string;
     }
   ];
 }

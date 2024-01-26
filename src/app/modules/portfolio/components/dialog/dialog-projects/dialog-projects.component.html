@@ -1,16 +1,26 @@
 <header>
-    <h2 mat-dialog-title>{{getData()?.title}}</h2>
-    <button mat-button mat-dialog-close>
-        <img src="assets/img/icons/close.svg" alt="">
-    </button>
+  <h2 mat-dialog-title>{{ getData?.title }}</h2>
+  <button mat-button (click)="closeDialog()">
+    <img src="assets/img/icons/close.svg" alt="" />
+  </button>
 </header>
 
 <mat-dialog-content>
-    <h3>Descrição</h3>
-    <article [innerHTML]="getData()?.description"></article>
-    <nav>
-        @for(item of getData()?.links; track item) {
-            <a [href]="item.href" target="_blank" class="btn btn-primary">
-            {{item.name}}</a>}
-    </nav>
+  <h3>{{ titleDialog() }}</h3>
+  @if(!flag){
+  <article [innerHTML]="typeAiArticle()"></article>
+  }@else {
+  <article [innerHTML]="typeAiArticle()"></article>
+  }
+  <nav>
+    @for(item of getData?.links; track item) {
+    <a
+      (click)="typeAi(item.history)"
+      target="_blank"
+      class="btn btn-primary"
+      #button
+    >
+      {{ item.name }}</a
+    >}
+  </nav>
 </mat-dialog-content>
