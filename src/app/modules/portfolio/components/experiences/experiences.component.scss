@@ -6,7 +6,18 @@
     align-items: center;
     flex-direction: column;
     
-   
+    article{
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        margin: 0 0 15px 0;
+        padding: 10px 20px;
+        border: 10px solid var(--black-010);
+        border-radius: 20px;
+        background: rgb(107, 107, 107);
+        color: var(--white);
+        text-align: justify;
+    }
 
 
     h2 {
@@ -26,15 +37,14 @@
             padding: 10px 20px;
             text-align: justify;
             transition: 0.5s;
+            
         }
 
         summary {
             cursor: pointer;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             background: var(--primary);
 
             p {
@@ -51,8 +61,10 @@
         &[open] {
             summary {
                 &::after {
-                    content: '▲';
+                    content: '▼';
                     color: var(--black-010);
+                    transition: 0.5s;
+                    transform: rotate3d(1, 0, 0, 180deg);
                 }
 
 
@@ -63,8 +75,10 @@
         &:not([open]) {
             summary {
                 &::after {
+                    
                     content: '▼';
                     color: var(--white);
+                    transition: 0.5s;
                 }
 
 
