@@ -10,7 +10,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver projeto",
-        href: "#",
+        href: ".",
+        history:
+          "A busca incessante por soluções inovadoras nos levou a mergulhar profundamente na engenharia de codecs e algoritmos de compactação, visando encontrar o equilíbrio ideal entre a qualidade do vídeo e a economia de espaço. Ao longo desse processo, enfrentamos desafios estimulantes que demandaram criatividade e expertise técnica, aprimorando nossa capacidade de superar obstáculos e inovar na vanguarda da tecnologia de streaming.",
       },
     ],
   },
@@ -25,7 +27,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Explorar a estrutura do Angular foi um divisor de águas em minha trajetória de desenvolvimento de sistemas. Ao adentrar no mundo dessa poderosa estrutura, deparei-me com um ambiente robusto e altamente estruturado, ideal para a implementação de projetos complexos e seguros.",
       },
     ],
   },
@@ -40,7 +44,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Código muito bom onde desenvolvo em CSS e também SCSS. Nesta própria página tem esta codificação.",
       },
     ],
   },
@@ -55,7 +61,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Código muito bom onde desenvolvo em CSS e também SCSS. Nesta própria página tem esta codificação.",
       },
     ],
   },
@@ -70,7 +78,8 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history: "É a atualidade em sistemas para desenvolvimento o HTML5.",
       },
     ],
   },
@@ -85,7 +94,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Javascript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma, uso em todos os sistemas tanto WEB quanto nas Engenharias Aeronáutica e Elétrica.",
       },
     ],
   },
@@ -100,7 +111,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Nestes projetos são de suma importância o conhecimento da Engenharia Aeronáutica pois todo conteúdo tem que ser revisado antes de fazer uma instalação, modificação ou manutenção.",
       },
     ],
   },
@@ -115,7 +128,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Nestes projetos são de suma importância o conhecimento da Engenharia Aeronáutica pois todo conteúdo tem que ser revisado antes de fazer uma instalação, modificação ou manutenção.",
       },
     ],
   },
@@ -130,7 +145,9 @@ export const arrayProjects = [
     links: [
       {
         name: "Ver Projeto",
-        href: "#",
+        href: ".",
+        history:
+          "Trabalhar em conjunto com as agências americana FAA e brasileira ANAC, sempre foi uma prioridade em segurança e também em desenvolvimento para o setor aeronáutico. com 13 SB's aprovados e outros em análise.",
       },
     ],
   },
