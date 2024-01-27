@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { ExperiencesService } from '../../../services/experiences.service';
 import { IExperience } from '../../interface/IExperience.interface';
-import { Observable, delay, observeOn, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { trigger, state, style, transition, animate, query, stagger, group } from '@angular/animations';
+import { trigger, style, transition, animate, query, stagger, group } from '@angular/animations';
 
 @Component({
   selector: 'app-experiences',
@@ -31,8 +31,6 @@ import { trigger, state, style, transition, animate, query, stagger, group } fro
 export class ExperiencesComponent implements OnInit{
   #experiences = inject(ExperiencesService);
   
-public list:IExperience[]=[]
-
   public experiencesArrayOb$(): Observable<IExperience[]> {
     return this.#experiences.readExperiences$;
   }

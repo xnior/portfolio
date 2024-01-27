@@ -7,7 +7,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { EDialogPanelClass } from "../../enum/EDialogPanelClass.enum";
 import { arrayProjects } from "../../../../../assets/DB/projects";
 import { CommonModule, I18nPluralPipe } from "@angular/common";
-import { Observable, delay, of } from "rxjs";
+import { Observable, delay, of, tap } from "rxjs";
 import { ApiService } from "../../../services/api.service";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
@@ -21,15 +21,16 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 export class ProjectsComponent implements OnInit {
   public dialog = inject(MatDialog);
   #apiService = inject(ApiService);
-  ngOnInit(): void {
-    this.loadArray$();
-  }
-  public loadArray: IProject[] = [];
 
-  public async loadArray$(): Promise<void> {
-    this.loadArray = await this.#apiService.loadArray$(arrayProjects);
+  public loadArray$(): Observable<any[]>{return this.#apiService.readApiService$;};
+  
+  async ngOnInit(): Promise<void> {
+    this.#apiService.readApiService$.subscribe();
+    this.#apiService.progressiveRead();
+    
   }
-
+  
+  
   public openDialog(data: IProject) {
     this.dialog.open(DialogProjectsComponent, {
       data,

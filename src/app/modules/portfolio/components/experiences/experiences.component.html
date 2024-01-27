@@ -1,8 +1,9 @@
 <div [@fadeIn] class="container">
+  <h2>Experiências</h2>
   
-    <h2>Experiências</h2>
     @for (item of experiencesArrayOb$() | async; track item) {
-    <details>
+    
+      <details>
       <summary>
         <p>
           <strong>{{ item.summary.strong }} - {{ item.summary.date}}</strong>{{ item.summary.p }}
@@ -11,4 +12,5 @@
       <article [innerHTML]="item.summary.description"></article>
     </details>
     }
-</div>
+
+  </div>
