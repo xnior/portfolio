@@ -11,12 +11,12 @@ export const arrayExperiences = [{
   },{
     //create a new object relating for Aeronautical Engineer and an airplane pilot, Embry Riddle Aeronautical University, Daytona Beach, Florida, USA.
     summary:{
-      strong: 'Aeronautical Engineer',
+      strong: 'Engenharia Aeronáutica (Convalidação)',
       p: 'Embry Riddle Aeronautical University',
       date: '2012 - 2017',
-      description: 'Concluir a licenciatura em Engenharia Aeronáutica foi um percurso verdadeiramente fascinante e desafiante, que moldou não só a minha carreira, mas também a minha perspectiva sobre a inovação na indústria aeroespacial. Ao longo do caminho, estive imerso num ambiente educativo que combinava o rigor académico com experiências práticas, proporcionando uma compreensão abrangente da complexidade e da evolução emocionante do setor.',
+      description: 'Concluir o bacharelado em Engenharia Aeronáutica foi um percurso verdadeiramente fascinante e desafiante, que moldou não só a minha carreira, mas também a minha perspectiva sobre a inovação na indústria aeroespacial. Ao longo do caminho, estive imerso num ambiente educativo que combinava o rigor académico com experiências práticas, proporcionando uma compreensão abrangente da complexidade e da evolução emocionante do setor.',
       logo: 'assets/img/erau.png'
-    },text: 'Concluir a licenciatura em Engenharia Aeronáutica foi um percurso verdadeiramente fascinante e desafiante, que moldou não só a minha carreira, mas também a minha perspectiva sobre a inovação na indústria aeroespacial. Ao longo do caminho, estive imerso num ambiente educativo que combinava o rigor académico com experiências práticas, proporcionando uma compreensão abrangente da complexidade e da evolução emocionante do setor.',
+    },text: 'Concluir o bacharelado em Engenharia Aeronáutica foi um percurso verdadeiramente fascinante e desafiante, que moldou não só a minha carreira, mas também a minha perspectiva sobre a inovação na indústria aeroespacial. Ao longo do caminho, estive imerso num ambiente educativo que combinava o rigor académico com experiências práticas, proporcionando uma compreensão abrangente da complexidade e da evolução emocionante do setor.',
   },{
     //create a new object relating for aeronautical studies and development of hardware and software for airplanes like Boeing Honeywell Aerospace like a research.
     summary:{
@@ -47,10 +47,10 @@ export const arrayExperiences = [{
   },{
     //faça um também destacando que fiz projetos para aviação ANAC
     summary:{
-      strong: 'Credênciado ANAC',
+      strong: 'Credênciado e Habilitado ANAC',
       p: 'ANAC Brasil',
-      date: '2017 - presente',
-      description: 'Como Engenheiro efetuo trabalhos juntamente com aprovação a Agência ANAC.',
+      date: '2008(Piloto) - 2017(Engenheiro)',
+      description: 'Como Engenheiro efetuo trabalhos juntamente com aprovação a Agência ANAC como manutenção e troca de equipamentos de técnologia Analógica e Digital(predominante), também sou Piloto de Avião e Helicóptero possuo mais de 3983 horas de vôo em avião dentre elas de Mono Motor, Multi Motor, Turbo Hélice King Air C90 e Jatos, para jatos a maior experiência é em Citation e Gulfstream G200, para Helicóptero possuo habilitação Mono Motor e Multi Motor com mais experiência em Agusta 109.',
       logo: 'assets/img/anac.png'
           },text: 'Após experiências de várias serviços como projetos e aprovações, atualmente atuo como Engenheiro Aeronáutico e Eletricista e também como Piloto, desempenhando atividades em colaboração com a aprovação da Agência Nacional de Aviação Civil (ANAC).',
   },{
@@ -58,7 +58,7 @@ export const arrayExperiences = [{
     summary:{
       strong: 'Credênciado FAA',
       p: 'FAA Estados Unidos',
-      date: '2014 - presente',
+      date: '2014(Piloto e Engenheiro) - presente',
       description: 'Como Engenheiro efetuo trabalhos juntamente com aprovação a Agência FAA.',
       logo: 'assets/img/faa.png'
     },text: 'Após experiências de várias serviços como projetos e aprovações, atualmente atuo como Engenheiro Aeronáutico e Eletricista e também como Piloto, desempenhando atividades em colaboração com a aprovação da Federal Aviation Administration (FAA).',
