@@ -5,16 +5,15 @@ import { MatDialog } from "@angular/material/dialog";
 import { DialogProjectsComponent } from "../dialog/dialog-projects/dialog-projects.component";
 import { MatButtonModule } from "@angular/material/button";
 import { EDialogPanelClass } from "../../enum/EDialogPanelClass.enum";
-import { arrayProjects } from "../../../../../assets/DB/projects";
-import { CommonModule, I18nPluralPipe } from "@angular/common";
+import { CommonModule } from "@angular/common";
 import { Observable, delay, of, tap } from "rxjs";
 import { ApiService } from "../../../services/api.service";
-import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @Component({
   selector: "app-projects",
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatProgressSpinnerModule],
+  imports: [CommonModule, MatButtonModule, MatProgressBarModule],
   templateUrl: "./projects.component.html",
   styleUrl: "./projects.component.scss",
 })
@@ -22,12 +21,15 @@ export class ProjectsComponent implements OnInit {
   public dialog = inject(MatDialog);
   #apiService = inject(ApiService);
 
-  public loadArray$(): Observable<any[]>{return this.#apiService.readApiService$;};
-  
-  async ngOnInit(): Promise<void> {
-    this.#apiService.readApiService$.subscribe();
-    this.#apiService.progressiveRead();
+  // public loadArray$(): Observable<any[]>{return this.#apiService.readApiService$;};
+
+  public arrayLoad:IProject[]=[]
+  async ngOnInit():Promise<any> {
+
+    // this.#apiService.readApiService$.subscribe();
     
+    this.arrayLoad = await this.#apiService.progressiveRead();
+      // console.log(this.arrayLoad);
   }
   
   

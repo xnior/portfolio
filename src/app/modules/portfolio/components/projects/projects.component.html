@@ -2,13 +2,13 @@
 
   <h2>Projetos Desenvolvidos</h2>
   <ul>
-    @for (item of loadArray$() | async; track item) {
+    @for (item of arrayLoad ; track item) {
     <li>
       <button (click)="openDialog(item)">
         <img [src]="item.src" [alt]="item.alt" [attr.width]="item.width" [attr.height]="item.height" loading="lazy" />
       </button>
     </li>
-  }
-</ul>
+  }@empty { <h2>Carregando ...</h2> <mat-progress-bar mode="indeterminate" color="warn" />}
+  </ul>
 
 </div>
