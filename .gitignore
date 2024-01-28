@@ -48,3 +48,5 @@ src/assets/img
 
 .vscode/settings.json
 src/app/modules/portfolio/interface/IProject.iterface.ts
+src/DB/experiences.ts
+src/DB/projects.ts
