@@ -49,7 +49,7 @@ export const arrayExperiences = [{
     summary:{
       strong: 'Credênciado e Habilitado ANAC',
       p: 'ANAC Brasil',
-      date: '2008(Piloto) - 2017(Engenheiro)',
+      date: '2008(Piloto) - 2017(Engenheiro) - presente',
       description: 'Como Engenheiro efetuo trabalhos juntamente com aprovação a Agência ANAC como manutenção e troca de equipamentos de técnologia Analógica e Digital(predominante), também sou Piloto de Avião e Helicóptero possuo mais de 3983 horas de vôo em avião dentre elas de Mono Motor, Multi Motor, Turbo Hélice King Air C90 e Jatos, para jatos a maior experiência é em Citation e Gulfstream G200, para Helicóptero possuo habilitação Mono Motor e Multi Motor com mais experiência em Agusta 109.',
       logo: 'assets/img/anac.png'
           },text: 'Após experiências de várias serviços como projetos e aprovações, atualmente atuo como Engenheiro Aeronáutico e Eletricista e também como Piloto, desempenhando atividades em colaboração com a aprovação da Agência Nacional de Aviação Civil (ANAC).',
