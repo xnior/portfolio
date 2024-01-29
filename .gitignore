@@ -50,3 +50,6 @@ src/assets/img
 src/app/modules/portfolio/interface/IProject.iterface.ts
 src/DB/experiences.ts
 src/DB/projects.ts
+src/app/animations/animation.ts
+src/app/modules/portfolio/components/header/header.component.ts
+src/app/modules/portfolio/pages/home/home.component.ts

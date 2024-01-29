@@ -5,13 +5,14 @@ import { ExperiencesComponent } from '../../components/experiences/experiences.c
 import { ProjectsComponent } from '../../components/projects/projects.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { trigger, transition, query, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [HeaderComponent, KnowledgeComponent, ExperiencesComponent, ProjectsComponent, MatProgressSpinnerModule, MatProgressBarModule ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
 

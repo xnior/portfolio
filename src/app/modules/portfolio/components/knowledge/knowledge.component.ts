@@ -1,5 +1,6 @@
 import { Component, signal } from "@angular/core";
 import { IKnowledge } from "../../interface/IKnowledge.interface";
+import { loadingAnimation } from "../../../../animations/animation";
 
 @Component({
   selector: "app-knowledge",
@@ -7,6 +8,7 @@ import { IKnowledge } from "../../interface/IKnowledge.interface";
   imports: [],
   templateUrl: "./knowledge.component.html",
   styleUrl: "./knowledge.component.scss",
+  animations:[loadingAnimation]
 })
 export class KnowledgeComponent {
   public arrayKnowledge = signal<IKnowledge[]>([
