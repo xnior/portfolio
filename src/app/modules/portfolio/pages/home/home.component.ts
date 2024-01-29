@@ -4,11 +4,12 @@ import { KnowledgeComponent } from '../../components/knowledge/knowledge.compone
 import { ExperiencesComponent } from '../../components/experiences/experiences.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, KnowledgeComponent, ExperiencesComponent, ProjectsComponent, MatProgressSpinnerModule ],
+  imports: [HeaderComponent, KnowledgeComponent, ExperiencesComponent, ProjectsComponent, MatProgressSpinnerModule, MatProgressBarModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

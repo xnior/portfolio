@@ -1,12 +1,17 @@
 <app-header />
 <main>
   <app-knowledge />
-  <app-experiences />
   @defer(on viewport){
+  <app-experiences />}@placeholder(minimum 2s){
+  <section><h2>Carregando Experiências ...</h2><br><mat-progress-bar mode="indeterminate" color="warn" /></section>
+  }@error {
+  <section>Erro ao carregar Experiências ....</section>
+  } @defer(on viewport){
   <app-projects />
-} 
-@placeholder(minimum 1s){
-  <section><h2>Carregando Projetos ....</h2><br>
+  } @placeholder(minimum 3s){
+  <section>
+    <h2>Carregando Projetos ....</h2><br><mat-progress-bar mode="indeterminate" color="warn" />
+    <br />
   </section>
   } @error {
   <section>Erro ao carregar Projetos ....</section>
