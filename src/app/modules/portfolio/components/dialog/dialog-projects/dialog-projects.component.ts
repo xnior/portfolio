@@ -57,9 +57,9 @@ export class DialogProjectsComponent implements OnInit, OnDestroy{
 
   closeDialog() {
     this.flag = 0;
-    this._dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // this._dialogRef.afterClosed().subscribe((result) => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
     this._dialogRef.close();
   }
 }
