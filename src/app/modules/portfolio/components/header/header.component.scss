@@ -1,6 +1,7 @@
-.mat-icon{
+.mat-icon {
     overflow: visible;
 }
+
 :host {
     &::before {
         content: '';
@@ -10,7 +11,13 @@
         margin-bottom: -65px;
         background: var(--primary);
     }
-    
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     header,
     aside {
         display: flex;
@@ -79,6 +86,7 @@
                         justify-content: center;
                         align-items: flex-start;
                         flex-direction: column;
+                        cursor: pointer;
 
                         p {
                             margin: 3px 0;
@@ -94,8 +102,13 @@
         }
 
         .blur {
+            transition: .5s;
             text-align: justify;
-            filter: blur(2px);
+            filter: blur(3px);
+        }
+        .unblur{
+            transition: .5s;
+            filter: blur(0);
         }
 
 
@@ -149,4 +162,20 @@
         }
     }
 
+    .hidden {
+        transition: .5s;
+        opacity: 0;
+    }
+    .hiddenFast {
+        opacity: 0;
+    }
+
+    .visible {
+        transition: .5s;
+        opacity: 1;
+    }
+
+    small {
+        color: var(--grey);
+    }
 }

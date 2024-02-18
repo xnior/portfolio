@@ -51,11 +51,8 @@
           height="24px"
         />
         <figcaption>
-          <a
-            href="https://api.whatsapp.com/send?phone=5516997670013&text=Olá Adhemar"
-            target="_blank"
-            ><strong>Envie uma Mensagem para:</strong>
-            <p>WhatsApp: (16) 9 9<span class="blur">767-0013</span></p></a
+          <a  (click)="changeClass()"><div class="flex"><strong>Envie uma Mensagem para:</strong><small [class]="classTimerTel">{{timerTel.toFixed(1)}}</small></div>
+            <p>WhatsApp: (16) <span [class]="className">9 9767-0013</span></p></a
           >
         </figcaption>
       </figure>
@@ -67,9 +64,9 @@
           height="24px"
         />
         <figcaption>
-          <a href="mailto:none" target="_blank"
-            ><strong>Envie um e-mail para:</strong>
-            <p>adhemar.machado&#64;<span class="blur">gmail.com</span></p></a
+          <a (click)="changeClassEmail()"
+            ><div class="flex"><strong>Envie um e-mail para: </strong><small [class]="classTimerEmail">{{timerEmail.toFixed(1)}}</small></div>
+            <p>adhemar<span [class]="classNameEmail">.machado&#64;gmail.com</span></p></a
           >
         </figcaption>
       </figure>
