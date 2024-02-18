@@ -28,7 +28,7 @@ export class HeaderComponent {
     this.classTimerTel = 'visible';
     const timer = setInterval(() => {
       this.timerTel! -= 0.1;
-      if (this.timerTel! <= 0.3) {
+      if (this.timerTel! <= 0.1) {
         clearInterval(timer);
         this.classTimerTel = 'hidden';
       }
@@ -41,7 +41,7 @@ export class HeaderComponent {
     this.classTimerEmail = 'visible';
     const timer = setInterval(() => {
       this.timerEmail! -= 0.1;
-      if (this.timerEmail! <= 0.3) {
+      if (this.timerEmail! <= 0.1) {
         clearInterval(timer);
         this.classTimerEmail = 'hidden';
       }
