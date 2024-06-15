@@ -45,6 +45,7 @@ Thumbs.db
 src/app/modules/services
 src/assets/DB
 src/assets/img
+src/assets/crea
 
 .vscode/settings.json
 src/app/modules/portfolio/interface/IProject.iterface.ts
@@ -56,3 +57,4 @@ src/app/modules/portfolio/pages/home/home.component.html
 src/app/modules/portfolio/pages/home/home.component.scss
 src/app/modules/portfolio/pages/home/home.component.ts
 src/app/app.routes.ts
+
