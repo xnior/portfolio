@@ -46,6 +46,7 @@ src/app/modules/services
 src/assets/DB
 src/assets/img
 src/assets/crea
+src/404.html
 
 .vscode/settings.json
 src/app/modules/portfolio/interface/IProject.iterface.ts
