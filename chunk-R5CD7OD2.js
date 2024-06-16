@@ -1,1 +1,0 @@
-import{mc as i,nc as o,oc as a,qc as t,sc as n,tc as r,uc as e}from"./chunk-YRIQOMNE.js";var s=[i("Anim",[n("*=>*",[r("*",[t({opacity:0}),e(100,[a([o("0.3s ease-in-out",t({opacity:1}))])])])])])];export{s as a};
