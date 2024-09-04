@@ -1,1 +1,0 @@
-import{oc as i,pc as o,qc as a,sc as t,uc as n,vc as r,wc as e}from"./chunk-T4B4IFVS.js";var s=[i("Anim",[n("*=>*",[r("*",[t({opacity:0}),e(100,[a([o("0.3s ease-in-out",t({opacity:1}))])])])])])];export{s as a};
