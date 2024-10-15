@@ -1,1 +1,0 @@
-import{pc as i,qc as o,rc as a,tc as t,vc as n,wc as r,xc as e}from"./chunk-JGLNFT2U.js";var s=[i("Anim",[n("*=>*",[r("*",[t({opacity:0}),e(100,[a([o("0.3s ease-in-out",t({opacity:1}))])])])])])];export{s as a};
