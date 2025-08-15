@@ -263,7 +263,7 @@
             background: #005885;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 450px) {
             .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 10px;
