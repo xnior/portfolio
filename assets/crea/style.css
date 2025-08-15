@@ -1,3 +1,7 @@
+        /* Correção do Padding Descrição */
+        .listar_label_valor{
+                display:none;
+        }
         /* Estilos adicionais para melhorar a apresentação */
         .container {
             max-width: 800px;
