@@ -342,10 +342,10 @@
 }
 
 @media (max-width: 450px) {
-  /* .skills-grid {
-                grid-template-columns: 1fr;
+   .skills-grid {
+                grid-template-columns: 1fr, 1fr;
                 gap: 10px;
-            } */
+            } 
 
   .social-links {
     flex-direction: column;
