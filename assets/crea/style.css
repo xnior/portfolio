@@ -1,5 +1,8 @@
 /* Developed by Eng.Dev.Adhemar Jr */
 /* Correção do Padding Descrição */
+body {
+  font-size: 14px;
+}
 .listar_label_valor {
   display: none;
 }
