@@ -6,6 +6,9 @@ body {
 .listar_label_valor {
   display: none;
 }
+.listar_label_result {
+  font-weight: normal;
+}
 /* Estilos adicionais para melhorar a apresentação */
 .container {
   max-width: 800px;
