@@ -1,921 +1,467 @@
-/* Developed by Eng.Dev.Adhemar Jr */
-/* Correção do Padding Descrição */
-body {
-  font-size: 14px;
-}
-.listar_label_valor {
-  display: none;
-}
-.listar_label_result {
-  font-weight: normal;
-}
-/* Estilos adicionais para melhorar a apresentação */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-}
-
-.profile {
-  text-align: center;
-  margin-bottom: 30px;
-  animation: profileEntry 1.5s ease-out;
-}
-
-.profile figure {
-  margin: 0 0 15px 0;
-  animation: imageEntry 2s ease-out 0.3s both;
-}
-
-.profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: contain;
-  border: 4px solid tomato;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.profile img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-color: #007bff;
-}
-
-.profile h1 {
-  margin: 0;
-  color: #333;
-  font-size: 2rem;
-  animation: titleEntry 2s ease-out 0.6s both;
-}
-
-.description {
-  line-height: 1.6;
-  animation: contentEntry 2.5s ease-out 0.9s both;
-}
-
-/* Engineering Animations Section */
-.engineering-section {
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
-  margin: 30px 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: engineeringSectionEntry 2s ease-out 1.2s both;
-}
-
-.engineering-title {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 30px;
-  font-size: 1.5rem;
-  animation: fadeInScale 2s ease-out 1.5s both;
-}
-
-.engineering-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 5px;
-  margin-bottom: 20px;
-}
-
-.engineering-item {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
-  color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  animation: engineeringItemEntry 1s ease-out forwards;
-  opacity: 0;
-}
-
-.engineering-item:nth-child(1) {
-  animation-delay: 2s;
-  background: linear-gradient(135deg, #ff1414, #00a2ff);
-}
-.engineering-item:nth-child(2) {
-  animation-delay: 2.3s;
-  background: linear-gradient(135deg, #00a2ff, #ff6b9d);
-}
-.engineering-item:nth-child(3) {
-  animation-delay: 2.6s;
-  background: linear-gradient(135deg, #ff6b9d, #0984e3);
-}
-
-.engineering-item:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-.engineering-item::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 70%
-  );
-  transform: scale(0);
-  transition: transform 0.6s ease;
-}
-
-.engineering-item:hover::before {
-  transform: scale(1);
-}
-
-.engineering-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  display: block;
-  animation: iconFloat 3s ease-in-out 1.7s both;
-}
-
-.civil-icon {
-  animation: civilAnimation 10s ease-in-out infinite;
-}
-
-.electrical-icon {
-  animation: electricalAnimation 10s ease-in-out infinite;
-}
-
-.aeronautical-icon {
-  /* transition: transform 0.3s; */
-  animation: aeronauticalAnimation 10s ease-in-out infinite;
-  /* transform: scale(1.15) rotate(-10deg); */
-}
-
-.engineering-title-text {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.engineering-desc {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  line-height: 1.4;
-}
-
-.safety-section {
-  /* background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); */
-  background: linear-gradient(135deg, #00a2ff 0%, #ff6b9d 45%, #0984e3 70%);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  margin: 20px 0;
-  animation: safetyEntry 2s ease-out 2.9s both;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.safety-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  animation: safetyPulse 10s ease-in-out infinite;
-}
-
-.intro-text {
-  margin-bottom: 25px;
-  text-align: justify;
-  animation: fadeInUp 2s ease-out 1.2s both;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.skills-section h2 {
-  color: #333;
-  margin-bottom: 15px;
-  text-align: center;
-  animation: fadeInScale 2s ease-out 1.5s both;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 30px;
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-  animation: skillsEntry 2.5s ease-out 1.8s both;
-}
-
-.skills-column {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skills-column li {
-  padding: 8px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  animation: skillItemEntry 0.5s ease-out forwards;
-  cursor: pointer;
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin: 4px 0;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.skills-column li:hover {
-  transform: translateX(10px) scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.skills-column li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  transition: left 0.5s ease;
-  z-index: -1;
-}
-
-.skills-column li:hover::before {
-  left: 0;
-}
-
-.skills-column li:nth-child(1) {
-  animation-delay: 2.1s;
-}
-.skills-column li:nth-child(2) {
-  animation-delay: 2.2s;
-}
-.skills-column li:nth-child(3) {
-  animation-delay: 2.3s;
-}
-.skills-column li:nth-child(4) {
-  animation-delay: 2.4s;
-}
-.skills-column li:nth-child(5) {
-  animation-delay: 2.5s;
-}
-.skills-column li:nth-child(6) {
-  animation-delay: 2.6s;
-}
-
-.skills-column:last-child li:nth-child(1) {
-  animation-delay: 2.7s;
-}
-.skills-column:last-child li:nth-child(2) {
-  animation-delay: 2.8s;
-}
-.skills-column:last-child li:nth-child(3) {
-  animation-delay: 2.9s;
-}
-.skills-column:last-child li:nth-child(4) {
-  animation-delay: 3s;
-}
-.skills-column:last-child li:nth-child(5) {
-  animation-delay: 3.1s;
-}
-.skills-column:last-child li:nth-child(6) {
-  animation-delay: 3.2s;
-}
-
-.skills-column i {
-  width: 20px;
-  text-align: center;
-}
-
-.social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  animation: socialLinksEntry 2s ease-out 3.5s both;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.social-links a:hover {
-  background: #0056b3;
-}
-
-.social-links a[href*="linkedin"] {
-  background: #0077b5;
-}
-
-.social-links a[href*="linkedin"]:hover {
-  background: #005885;
-}
-
-@media (max-width: 768px) {
-  .engineering-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .engineering-item,
-  .safety-section {
-    background: linear-gradient(135deg, #00a2ff 0%, #ff6b9d 100%);
-  }
-}
-
-@media (max-width: 450px) {
-  .container {
-    padding: 5px;
-  }
-
-  .skills-grid {
-                grid-template-columns: 1fr, 1fr;
+        /* Estilos adicionais para melhorar a apresentação */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: profileEntry 1.5s ease-out;
+        }
+        
+        .profile figure {
+            margin: 0 0 15px 0;
+            animation: imageEntry 2s ease-out 0.3s both;
+        }
+        
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .profile img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-color: #007bff;
+        }
+        
+        .profile h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2rem;
+            animation: titleEntry 2s ease-out 0.6s both;
+        }
+        
+        .description {
+            line-height: 1.6;
+            animation: contentEntry 2.5s ease-out 0.9s both;
+        }
+        
+        .intro-text {
+            margin-bottom: 25px;
+            text-align: justify;
+            animation: fadeInUp 2s ease-out 1.2s both;
+        }
+        
+        .skills-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+            animation: fadeInScale 2s ease-out 1.5s both;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            animation: skillsEntry 2.5s ease-out 1.8s both;
+        }
+        
+        .skills-column {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skills-column li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            animation: skillItemEntry 0.5s ease-out forwards;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skills-column li:hover {
+            transform: translateX(10px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .skills-column li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+        
+        .skills-column li:hover::before {
+            left: 0;
+        }
+        
+        .skills-column li:nth-child(1) { animation-delay: 2.1s; }
+        .skills-column li:nth-child(2) { animation-delay: 2.2s; }
+        .skills-column li:nth-child(3) { animation-delay: 2.3s; }
+        .skills-column li:nth-child(4) { animation-delay: 2.4s; }
+        .skills-column li:nth-child(5) { animation-delay: 2.5s; }
+        .skills-column li:nth-child(6) { animation-delay: 2.6s; }
+        
+        .skills-column:last-child li:nth-child(1) { animation-delay: 2.7s; }
+        .skills-column:last-child li:nth-child(2) { animation-delay: 2.8s; }
+        .skills-column:last-child li:nth-child(3) { animation-delay: 2.9s; }
+        .skills-column:last-child li:nth-child(4) { animation-delay: 3.0s; }
+        .skills-column:last-child li:nth-child(5) { animation-delay: 3.1s; }
+        .skills-column:last-child li:nth-child(6) { animation-delay: 3.2s; }
+        
+        /* Hover animations específicas para cada tecnologia */
+        
+        /* C# - Verde Microsoft */
+        .skills-column li:hover .fa-terminal[style*="239120"] {
+            animation: csharpPulse 0.6s ease-in-out;
+        }
+        .skills-column li:has(.fa-terminal[style*="239120"]):hover::before {
+            background: linear-gradient(45deg, rgba(35, 145, 32, 0.1), rgba(35, 145, 32, 0.05));
+        }
+        
+        /* Java - Laranja */
+        .skills-column li:hover .fa-java {
+            animation: javaShake 0.6s ease-in-out;
+        }
+        .skills-column li:has(.fa-java):hover::before {
+            background: linear-gradient(45deg, rgba(248, 152, 32, 0.1), rgba(248, 152, 32, 0.05));
+        }
+        
+        /* JavaScript - Amarelo */
+        .skills-column li:hover .fa-js {
+            animation: jsRotate 0.8s ease-in-out;
+        }
+        .skills-column li:has(.fa-js):hover::before {
+            background: linear-gradient(45deg, rgba(240, 219, 79, 0.1), rgba(240, 219, 79, 0.05));
+        }
+        
+        /* Python - Azul */
+        .skills-column li:hover .fa-python {
+            animation: pythonSlide 0.7s ease-in-out;
+        }
+        .skills-column li:has(.fa-python):hover::before {
+            background: linear-gradient(45deg, rgba(48, 105, 152, 0.1), rgba(48, 105, 152, 0.05));
+        }
+        
+        /* VBA - Verde */
+        .skills-column li:hover .fa-code[style*="107c10"] {
+            animation: vbaBounce 0.6s ease-in-out;
+        }
+        .skills-column li:has(.fa-code[style*="107c10"]):hover::before {
+            background: linear-gradient(45deg, rgba(16, 124, 16, 0.1), rgba(16, 124, 16, 0.05));
+        }
+        
+        /* Angular - Vermelho */
+        .skills-column li:hover .fa-angular {
+            animation: angularSpin 1s ease-in-out;
+        }
+        .skills-column li:has(.fa-angular):hover::before {
+            background: linear-gradient(45deg, rgba(221, 0, 49, 0.1), rgba(221, 0, 49, 0.05));
+        }
+        
+        /* Azure - Azul */
+        .skills-column li:hover .fa-cloud {
+            animation: azureFloat 1s ease-in-out infinite;
+        }
+        .skills-column li:has(.fa-cloud):hover::before {
+            background: linear-gradient(45deg, rgba(0, 120, 212, 0.1), rgba(0, 120, 212, 0.05));
+        }
+        
+        /* Node.js - Verde */
+        .skills-column li:hover .fa-node-js {
+            animation: nodePulse 0.8s ease-in-out;
+        }
+        .skills-column li:has(.fa-node-js):hover::before {
+            background: linear-gradient(45deg, rgba(104, 160, 99, 0.1), rgba(104, 160, 99, 0.05));
+        }
+        
+        /* PHP - Roxo */
+        .skills-column li:hover .fa-php {
+            animation: phpWiggle 0.6s ease-in-out;
+        }
+        .skills-column li:has(.fa-php):hover::before {
+            background: linear-gradient(45deg, rgba(137, 147, 190, 0.1), rgba(137, 147, 190, 0.05));
+        }
+        
+        /* SQL/MySQL - Azul */
+        .skills-column li:hover .fa-database {
+            animation: sqlGlow 1s ease-in-out;
+        }
+        .skills-column li:has(.fa-database):hover::before {
+            background: linear-gradient(45deg, rgba(51, 103, 145, 0.1), rgba(51, 103, 145, 0.05));
+        }
+        
+        /* C++ - Azul escuro */
+        .skills-column li:hover .fa-cogs {
+            animation: cppRotate 0.8s ease-in-out;
+        }
+        .skills-column li:has(.fa-cogs):hover::before {
+            background: linear-gradient(45deg, rgba(4, 79, 136, 0.1), rgba(4, 79, 136, 0.05));
+        }
+        
+        /* COBOL - Verde escuro */
+        .skills-column li:hover .fa-terminal[style*="004225"] {
+            animation: cobolTypewriter 1s ease-in-out;
+        }
+        .skills-column li:has(.fa-terminal[style*="004225"]):hover::before {
+            background: linear-gradient(45deg, rgba(0, 66, 37, 0.1), rgba(0, 66, 37, 0.05));
+        }
+        
+        .skills-column i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: socialLinksEntry 2s ease-out 3.5s both;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: #0056b3;
+        }
+        
+        .social-links a[href*="linkedin"] {
+            background: #0077b5;
+        }
+        
+        .social-links a[href*="linkedin"]:hover {
+            background: #005885;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
                 gap: 10px;
             }
-
-  .social-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile h1 {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 350px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-/* Animações */
-@keyframes profileEntry {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes imageEntry {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) rotate(-180deg);
-  }
-  60% {
-    transform: scale(1.1) rotate(10deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-@keyframes titleEntry {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-    letter-spacing: 10px;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    letter-spacing: normal;
-  }
-}
-
-@keyframes contentEntry {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes skillsEntry {
-  0% {
-    opacity: 0;
-    transform: rotateX(90deg) translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateX(0deg) translateY(0);
-  }
-}
-
-@keyframes skillItemEntry {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes socialLinksEntry {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Engineering Specific Animations */
-@keyframes engineeringSectionEntry {
-  0% {
-    opacity: 0;
-    transform: rotateY(-90deg) translateZ(-200px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(0deg) translateZ(0);
-  }
-}
-
-@keyframes engineeringItemEntry {
-  0% {
-    opacity: 0;
-    transform: translateY(50px) rotateX(45deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg);
-  }
-}
-
-@keyframes safetyEntry {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) rotate(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-/* Civil Engineering - Building Construction Animation */
-@keyframes civilAnimation {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  10% {
-    transform: translateY(-5px) scale(1.05);
-  }
-  15% {
-    transform: translateY(-8px) scale(1.1) rotateY(10deg);
-  }
-  20% {
-    transform: translateY(-3px) scale(1.05) rotateY(-5deg);
-  }
-  21% {
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Electrical Engineering - Electric Current Animation */
-@keyframes electricalAnimation {
-  20% {
-    transform: scale(1) rotate(0deg);
-    filter: brightness(1) drop-shadow(0 0 0px #ffd93d);
-  }
-  25% {
-    transform: scale(1.1) rotate(5deg);
-    filter: brightness(1.2) drop-shadow(0 0 5px #ffd93d);
-  }
-  30% {
-    transform: scale(1.2) rotate(-5deg);
-    filter: brightness(1.4) drop-shadow(0 0 10px #ffd93d);
-  }
-  35% {
-    transform: scale(1.1) rotate(3deg);
-    filter: brightness(1.2) drop-shadow(0 0 5px #ffd93d);
-  }
-  40% {
-    transform: scale(1) rotate(0deg);
-    filter: brightness(1) drop-shadow(0 0 0px #ffd93d);
-  }
-}
-
-/* Aeronautical Engineering - Flight Animation */
-@keyframes aeronauticalAnimation {
-  0%,
-  37%,
-  100% {
-    transform: translateX(-10px) translateY(0) rotate(-2deg);
-  }
-  40% {
-    transform: translateX(-5px) translateY(-8px) rotate(1deg) scale(1.05);
-  }
-  45% {
-    transform: translateX(0) translateY(-12px) rotate(0deg) scale(1.1);
-  }
-  50% {
-    transform: translateX(5px) translateY(-8px) rotate(-1deg) scale(1.05);
-  }
-  55% {
-    transform: translateX(10px) translateY(0) rotate(2deg);
-  }
-  56% {
-    transform: translateX(-10px) translateY(0) rotate(-2deg);
-  }
-}
-
-/* Safety Engineering - Shield Pulse */
-@keyframes safetyPulse {
-  0%,
-  57%,
-  70%,
-  100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.8));
-  }
-  60% {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-  }
-}
-
-@keyframes iconFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-/* Hover animations específicas para cada tecnologia */
-
-/* C# - Verde Microsoft */
-.skills-column li:hover .fa-terminal[style*="239120"] {
-  animation: csharpPulse 0.6s ease-in-out;
-}
-.skills-column li:has(.fa-terminal[style*="239120"]):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(35, 145, 32, 0.1),
-    rgba(35, 145, 32, 0.05)
-  );
-}
-
-/* Java - Laranja */
-.skills-column li:hover .fa-java {
-  animation: javaShake 0.6s ease-in-out;
-}
-.skills-column li:has(.fa-java):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(248, 152, 32, 0.1),
-    rgba(248, 152, 32, 0.05)
-  );
-}
-
-/* JavaScript - Amarelo */
-.skills-column li:hover .fa-js {
-  animation: jsRotate 0.8s ease-in-out;
-}
-.skills-column li:has(.fa-js):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(240, 219, 79, 0.1),
-    rgba(240, 219, 79, 0.05)
-  );
-}
-
-/* Python - Azul */
-.skills-column li:hover .fa-python {
-  animation: pythonSlide 0.7s ease-in-out;
-}
-.skills-column li:has(.fa-python):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(48, 105, 152, 0.1),
-    rgba(48, 105, 152, 0.05)
-  );
-}
-
-/* VBA - Verde */
-.skills-column li:hover .fa-code[style*="107c10"] {
-  animation: vbaBounce 0.6s ease-in-out;
-}
-.skills-column li:has(.fa-code[style*="107c10"]):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(16, 124, 16, 0.1),
-    rgba(16, 124, 16, 0.05)
-  );
-}
-
-/* Angular - Vermelho */
-.skills-column li:hover .fa-angular {
-  animation: angularSpin 1s ease-in-out;
-}
-.skills-column li:has(.fa-angular):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(221, 0, 49, 0.1),
-    rgba(221, 0, 49, 0.05)
-  );
-}
-
-/* Azure - Azul */
-.skills-column li:hover .fa-cloud {
-  animation: azureFloat 1s ease-in-out infinite;
-}
-.skills-column li:has(.fa-cloud):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(0, 120, 212, 0.1),
-    rgba(0, 120, 212, 0.05)
-  );
-}
-
-/* Node.js - Verde */
-.skills-column li:hover .fa-node-js {
-  animation: nodePulse 0.8s ease-in-out;
-}
-.skills-column li:has(.fa-node-js):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(104, 160, 99, 0.1),
-    rgba(104, 160, 99, 0.05)
-  );
-}
-
-/* PHP - Roxo */
-.skills-column li:hover .fa-php {
-  animation: phpWiggle 0.6s ease-in-out;
-}
-.skills-column li:has(.fa-php):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(137, 147, 190, 0.1),
-    rgba(137, 147, 190, 0.05)
-  );
-}
-
-/* SQL/MySQL - Azul */
-.skills-column li:hover .fa-database {
-  animation: sqlGlow 1s ease-in-out;
-}
-.skills-column li:has(.fa-database):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(51, 103, 145, 0.1),
-    rgba(51, 103, 145, 0.05)
-  );
-}
-
-/* C++ - Azul escuro */
-.skills-column li:hover .fa-cogs {
-  animation: cppRotate 0.8s ease-in-out;
-}
-.skills-column li:has(.fa-cogs):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(4, 79, 136, 0.1),
-    rgba(4, 79, 136, 0.05)
-  );
-}
-
-/* COBOL - Verde escuro */
-.skills-column li:hover .fa-terminal[style*="004225"] {
-  animation: cobolTypewriter 1s ease-in-out;
-}
-.skills-column li:has(.fa-terminal[style*="004225"]):hover::before {
-  background: linear-gradient(
-    45deg,
-    rgba(0, 66, 37, 0.1),
-    rgba(0, 66, 37, 0.05)
-  );
-}
-
-/* Animações específicas para cada tecnologia */
-
-@keyframes csharpPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-    filter: brightness(1.2);
-  }
-}
-
-@keyframes javaShake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-3px) rotate(-5deg);
-  }
-  75% {
-    transform: translateX(3px) rotate(5deg);
-  }
-}
-
-@keyframes jsRotate {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  25% {
-    transform: rotate(90deg) scale(1.1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.2);
-  }
-  75% {
-    transform: rotate(270deg) scale(1.1);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
-@keyframes pythonSlide {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-5px) scale(1.1);
-  }
-  50% {
-    transform: translateY(5px) scale(1.2);
-  }
-  75% {
-    transform: translateY(-3px) scale(1.1);
-  }
-}
-
-@keyframes vbaBounce {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  25% {
-    transform: translateY(-8px) scale(1.1);
-  }
-  50% {
-    transform: translateY(-12px) scale(1.2);
-  }
-  75% {
-    transform: translateY(-4px) scale(1.1);
-  }
-}
-
-@keyframes angularSpin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.2);
-    filter: hue-rotate(30deg);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
-@keyframes azureFloat {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.1);
-    opacity: 0.8;
-  }
-}
-
-@keyframes nodePulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.3);
-    opacity: 0.7;
-    filter: brightness(1.3);
-  }
-}
-
-@keyframes phpWiggle {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-10deg) scale(1.1);
-  }
-  75% {
-    transform: rotate(10deg) scale(1.1);
-  }
-}
-
-@keyframes sqlGlow {
-  0%,
-  100% {
-    transform: scale(1);
-    filter: brightness(1) drop-shadow(0 0 0px currentColor);
-  }
-  50% {
-    transform: scale(1.2);
-    filter: brightness(1.3) drop-shadow(0 0 8px currentColor);
-  }
-}
-
-@keyframes cppRotate {
-  0%,
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-  25% {
-    transform: rotate(90deg) scale(1.1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.2);
-  }
-  75% {
-    transform: rotate(270deg) scale(1.1);
-  }
-}
-
-@keyframes cobolTypewriter {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.9) rotateY(180deg);
-  }
-  50% {
-    transform: scale(1.1) rotateY(360deg);
-  }
-  75% {
-    transform: scale(0.95) rotateY(540deg);
-  }
-}
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile h1 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Animações */
+        @keyframes profileEntry {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes imageEntry {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) rotate(-180deg);
+            }
+            60% {
+                transform: scale(1.1) rotate(10deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        
+        @keyframes titleEntry {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+                letter-spacing: 10px;
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+                letter-spacing: normal;
+            }
+        }
+        
+        @keyframes contentEntry {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes skillsEntry {
+            0% {
+                opacity: 0;
+                transform: rotateX(90deg) translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateX(0deg) translateY(0);
+            }
+        }
+        
+        @keyframes skillItemEntry {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes socialLinksEntry {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* Animações específicas para cada tecnologia */
+        
+        @keyframes csharpPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); filter: brightness(1.2); }
+        }
+        
+        @keyframes javaShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px) rotate(-5deg); }
+            75% { transform: translateX(3px) rotate(5deg); }
+        }
+        
+        @keyframes jsRotate {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(90deg) scale(1.1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            75% { transform: rotate(270deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        @keyframes pythonSlide {
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-5px) scale(1.1); }
+            50% { transform: translateY(5px) scale(1.2); }
+            75% { transform: translateY(-3px) scale(1.1); }
+        }
+        
+        @keyframes vbaBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            25% { transform: translateY(-8px) scale(1.1); }
+            50% { transform: translateY(-12px) scale(1.2); }
+            75% { transform: translateY(-4px) scale(1.1); }
+        }
+        
+        @keyframes angularSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); filter: hue-rotate(30deg); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        @keyframes azureFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.1); opacity: 0.8; }
+        }
+        
+        @keyframes nodePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; filter: brightness(1.3); }
+        }
+        
+        @keyframes phpWiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg) scale(1.1); }
+            75% { transform: rotate(10deg) scale(1.1); }
+        }
+        
+        @keyframes sqlGlow {
+            0%, 100% { 
+                transform: scale(1); 
+                filter: brightness(1) drop-shadow(0 0 0px currentColor); 
+            }
+            50% { 
+                transform: scale(1.2); 
+                filter: brightness(1.3) drop-shadow(0 0 8px currentColor); 
+            }
+        }
+        
+        @keyframes cppRotate {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(90deg) scale(1.1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            75% { transform: rotate(270deg) scale(1.1); }
+        }
+        
+        @keyframes cobolTypewriter {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(0.9) rotateY(180deg); }
+            50% { transform: scale(1.1) rotateY(360deg); }
+            75% { transform: scale(0.95) rotateY(540deg); }
+        }
